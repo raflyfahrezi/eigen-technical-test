@@ -1,7 +1,10 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+
+import { router } from './helpers'
 
 const App = () => {
-  return <div>App</div>
+  return <RouterProvider router={router} />
 }
 
 export default App
