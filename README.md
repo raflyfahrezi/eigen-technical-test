@@ -27,6 +27,12 @@ yarn run dev
 http://localhost:5173/
 ```
 
+## How to Test
+
+```
+yarn run test
+```
+
 ## How to check Algorithm
 
 ```
