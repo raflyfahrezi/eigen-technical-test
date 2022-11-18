@@ -17,7 +17,7 @@ const ModalContent = ({
     <div className={sModalContent}>
       <img src={urlToImage} className={sModalContentImage} alt='image news' />
       <Paragraph className={sModalAuthor}>
-        {author && `by ${getFormattedAuthor(author, source)}`} at{' '}
+        {author && `${getFormattedAuthor(author, source)}`} at{' '}
         {getFormattedDate(publishedAt)}
       </Paragraph>
       <Paragraph>{description}</Paragraph>
