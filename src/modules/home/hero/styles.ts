@@ -19,6 +19,11 @@ export const sHeroContent = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 800px) {
+    gap: 40px;
+    flex-direction: column;
+  }
 `
 
 export const sHeroTitle = css`
@@ -38,6 +43,8 @@ export const sHeroContentImageBox = css`
 `
 
 export const sHeroImage = css`
-  height: 100%;
-  max-height: 300px;
+  width: 100%;
+  max-width: 2500px;
+  /* height: 100%;
+  max-height: 300px; */
 `

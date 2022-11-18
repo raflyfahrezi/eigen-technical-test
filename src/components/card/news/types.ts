@@ -1,3 +1,5 @@
 import { TNews } from '@/models'
 
-export type TNewsCardProps = {} & TNews
+export type TNewsCardProps = {
+  onClick: (news: TNews) => void
+} & TNews
