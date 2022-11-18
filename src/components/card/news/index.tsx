@@ -7,13 +7,9 @@ import { TNewsCardProps } from './types'
 import { sCardContent, sCard, sCardAuthor, sCardImage } from './styles'
 import { getFormattedDate, getFormattedAuthor } from './helpers'
 
-const NewsCard = ({
-  title,
-  author,
-  source,
-  urlToImage,
-  publishedAt,
-}: TNewsCardProps) => {
+const NewsCard = ({ onClick, ...news }: TNewsCardProps) => {
+  const { title, urlToImage, source, publishedAt, author } = news
+
   return (
     <Card
       key={title}
@@ -38,7 +34,9 @@ const NewsCard = ({
           {author && getFormattedAuthor(author, source)} at{' '}
           {getFormattedDate(publishedAt)}
         </Paragraph>
-        <Button type='primary'>See More</Button>
+        <Button type='primary' onClick={() => onClick(news)}>
+          See More
+        </Button>
       </div>
     </Card>
   )
