@@ -6,7 +6,7 @@ import { TParagraphProps } from './types'
 
 const Paragraph = ({ children, className, ...props }: TParagraphProps) => {
   return (
-    <p className={cx(className, sParagraph)} {...props}>
+    <p className={cx(sParagraph, className)} {...props}>
       {children}
     </p>
   )
