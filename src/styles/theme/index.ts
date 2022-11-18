@@ -1,7 +1,7 @@
 import { TTheme } from './types'
 
 const theme: TTheme = {
-  blue: '#096dd9',
+  primary: '#fffbe6',
 }
 
 export default theme
