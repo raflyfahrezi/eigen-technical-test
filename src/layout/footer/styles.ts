@@ -5,7 +5,7 @@ import { theme } from '@/styles'
 export const sFooter = css`
   width: 100%;
 
-  background-color: ${theme.blue};
+  background-color: ${theme.primary};
 `
 
 export const sFooterContent = css`
@@ -18,6 +18,4 @@ export const sFooterContent = css`
 
 export const sFooterText = css`
   font-size: 14px;
-
-  color: #d9d9d9;
 `
