@@ -1,10 +1,11 @@
 import axios from 'axios'
 
 import { AxiosProps } from './types'
+import { getFormattedURLWithAPIKey } from './helpers'
 
-export const axiosGet = (url: string, config?: AxiosProps) => {
-  return axios.get(`${url}?apiKey=${process.env.REACT_APP_API_KEY}`, {
+export const axiosGet = <T>(url: string, config?: AxiosProps) => {
+  return axios.get<T>(getFormattedURLWithAPIKey(url), {
     ...config,
-    baseURL: config?.withoutBaseURL ? '' : process.env.REACT_APP_BASE_URL,
+    baseURL: config?.withoutBaseURL ? '' : import.meta.env.VITE_BASE_URL,
   })
 }
