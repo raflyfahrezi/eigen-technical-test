@@ -15,12 +15,19 @@ const ModalContent = ({
 }: TModalContent) => {
   return (
     <div className={sModalContent}>
-      <img src={urlToImage} className={sModalContentImage} alt='image news' />
+      <img
+        src={urlToImage ?? '/image-placeholder.jpg'}
+        className={sModalContentImage}
+        alt='image news'
+        onError={(e) => {
+          e.currentTarget.src = '/image-placeholder.jpg'
+        }}
+      />
       <Paragraph className={sModalAuthor}>
         {author && `${getFormattedAuthor(author, source)}`} at{' '}
         {getFormattedDate(publishedAt)}
       </Paragraph>
-      <Paragraph>{description}</Paragraph>
+      <Paragraph>{description ?? 'No description is provided.'}</Paragraph>
     </div>
   )
 }
